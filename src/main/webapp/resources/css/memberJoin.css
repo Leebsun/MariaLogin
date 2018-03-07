@@ -1,0 +1,149 @@
+@CHARSET "UTF-8";
+
+section {
+	width: 100%;
+	height: 1000px;
+}
+.allContents {
+	width: 1000px;
+	height: auto;
+	margin: 0 auto;
+}
+.leftContents {
+	width: 250px;
+	height: auto;
+	float: left;
+}
+.leftMenu {
+	width: 100%;
+	height: auto;
+}
+.leftMenu_header {
+	width: 100%;
+    height: 40px;
+    background-color: #3f4b5e;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    line-height: 40px;
+    padding-left: 10px;
+}
+.leftMenu_wrapper {
+	width: 100%;
+	height: auto;
+	margin-top: 20px;
+}
+.leftMenu_wrapper ul {
+	list-style: none;
+}
+.leftMenu_wrapper ul li {
+	width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #E0E0E0;
+    padding-left: 10px;
+}
+.leftMenu_wrapper ul li a {
+	width: 100%;
+	height: 100%;
+	color: black;
+	font-size: 15px;
+	font-weight: bold;
+	display: block;
+}
+.leftMenu_wrapper ul li a:hover {
+	color: RGB(18, 165, 244);
+	text-decoration: none;
+}
+.rightContents {
+	width: 720px;
+	height: auto;
+	margin: 0 auto;
+}
+.contents_header {
+	font-size: 25px;
+	font-weight: bolder;
+}
+.contents_header span {
+	font-size: 15px;
+	color: red;
+}
+.contents_wrapper {
+	margin-top: 20px;
+}
+.required_mark {
+	color: red;
+    font-weight: bold;
+    font-size: 15px;
+    position: relative;
+}
+.joinForm {
+	width: 100%;
+}
+.joinForm tr {
+	height: 70px;
+}
+.joinForm tr td {
+	
+}
+.joinTitles {
+	width: 20%;
+	text-align: right;
+	padding-right: 20px;
+}
+.checkResult {
+	position: absolute;
+}
+#emailSelect {
+	width: 130px;
+	height: 35px;
+	font-size: 15px;
+}
+#drop {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	margin-left: 20px;
+}
+#drop img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+.dropDiv {
+	display: inline-block;
+	margin-left: 50px;
+    font-size: 17px;
+    font-weight: bold;
+}
+#delBtn {
+	top: -38px;
+    right: 365px;
+    font-size: 20px;
+    color: gray;
+    cursor: pointer;
+}
+.contents_btn {
+	text-align: center;
+	margin-top: 20px;
+}
+.contents_btn input {
+	width: 30%;
+    height: 41px;
+    margin: 10px;
+    font-size: 20px;
+    color: white;
+    border: none;
+    background-color: darkgrey;
+}
+.contents_btn a {
+    margin: 10px;
+    font-size: 20px;
+    color: white;
+    border: none;
+    padding: 9px 12%;
+    background-color: red;
+}
+.contents_btn a:hover {
+	text-decoration: none;
+}
