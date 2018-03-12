@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="memberMapper">
+
+	<!-- 일반회원 아이디 체크 -->
+		<select id="selectOne" parameterType="int" resultType="MemberDTO">
+			SELECT * FROM member WHERE member_seq=#{member_seq}
+		</select>
+	<!-- 일반회원 아이디 체크 -->
+		<select id="memberIdCheck" parameterType="String" resultType="String">
+			SELECT id FROM member where id=#{checkId}
+		</select>
+	<!-- 일반회원 회원가입 -->  	
+	  	<insert id="memberJoin" parameterType="MemberDTO">
+	  		INSERT INTO member VALUES(MEMBER_SEQ.nextval, #{id}, #{pw}, #{name})
+	  	</insert>
+	<!-- 일반회원 로그인 -->
+		<select id="memberLogin" parameterType="MemberDTO" resultType="MemberDTO">
+			SELECT * FROM member WHERE id=#{id} AND pw=#{pw}
+		</select>
+	
+	  	 
+</mapper>

@@ -4,10 +4,6 @@ public class MemberDTO {
 	private String id;
 	private String pw;
 	private String name;
-	private String phone;
-	private String email;
-	private String age;
-	private String address;
 	
 	
 	public String getId() {
@@ -27,30 +23,6 @@ public class MemberDTO {
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
-	public String getPhone() {
-		return phone;
-	}
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public String getAge() {
-		return age;
-	}
-	public void setAge(String age) {
-		this.age = age;
-	}
-	public String getAddress() {
-		return address;
-	}
-	public void setAddress(String address) {
-		this.address = address;
 	}
 
 }
