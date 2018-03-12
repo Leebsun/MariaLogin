@@ -59,14 +59,6 @@ public class MemberController {
 	@RequestMapping(value="memberJoin", method=RequestMethod.GET)
 	public ModelAndView memberJoin(MemberDTO memberDTO, ModelAndView mv, HttpSession session) throws Exception {
 
-		if(session.getAttribute("naverId") != null)
-		{
-			session.removeAttribute("naverId");
-		}
-		if(session.getAttribute("naverName") != null)
-		{
-			session.removeAttribute("naverName");
-		}
 		mv.addObject("menuTitle", "회원가입");
 		mv.setViewName("member/memberJoin");
 		

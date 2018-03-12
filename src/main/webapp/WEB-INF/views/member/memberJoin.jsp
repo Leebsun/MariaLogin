@@ -18,7 +18,7 @@
 <link
 	href="${pageContext.request.contextPath}/resources/css/memberJoin.css"
 	rel="stylesheet">
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	$(function() {
 
 		var message = "${message}";
@@ -72,7 +72,7 @@
 													agree1 = 0;
 												}
 
-												if (agree1 + agree2 + agree3 == 3) {
+												if (agree1 + agree2 + agree3 + agree4 == 4) {
 													$("#subBtn")
 															.css(
 																	"background-color",
@@ -129,14 +129,16 @@
 						agree2 = 1;
 					}
 
-					if (agree1 + agree2 + agree3 + agree4 + agree5 + agree6
-							+ agree7 == 7) {
+					if (agree1 + agree2 + agree3 + agree4 == 4) {
 						$("#subBtn").css("background-color",
 								"RGB(18, 165, 244)");
 					} else {
 						$("#subBtn").css("background-color", "darkgrey");
 					}
 				});
+		
+		
+		
 		$("#pwCheck").change(
 				function() {
 
@@ -153,21 +155,53 @@
 						agree3 = 0;
 					}
 
-					if (agree1 + agree2 + agree3 + agree4 + agree5 + agree6
-							+ agree7 == 7) {
+					if (agree1 + agree2 + agree3 + agree4 == 4) {
 						$("#subBtn").css("background-color",
 								"RGB(18, 165, 244)");
 					} else {
 						$("#subBtn").css("background-color", "darkgrey");
 					}
+					
+					
+				});
+		
+		$("#name").change(
+				function() {
+
+					if ($(this).val().length > 15) {
+						alert(" 이름이 너무 깁니다.");
+						agree4 = 0;
+					}
+					else{
+
+					
+						agree4 = 1;
+					}
+				
+
+					if (agree1 + agree2 + agree3 + agree4 == 4) {
+						$("#subBtn").css("background-color",
+								"RGB(18, 165, 244)");
+					} else {
+						$("#subBtn").css("background-color", "darkgrey");
+					}
+					
+					if(agree1+agree2+agree3 + agree4== 4)
+					{
+						$("#frm").submit();				
+					}
+					else
+					{
+						alert("필수 입력란을 모두 입력해주세요.");
+					}
 				});
 
 	});
-</script>
+</script> -->
 </head>
 <body>
 
-	<section>
+	<%-- <section>
 		<div class="allContents">
 			<div class="rightContents">
 				<div class="contents_header">
@@ -176,21 +210,16 @@
 				<div class="contents_wrapper">
 					<form id="frm"
 						action="${pageContext.request.contextPath}/member/memberJoin"
-						method="post" enctype="multipart/form-data">
+						method="post">
 						<table class="joinForm">
 							<tr>
 								<td class="joinTitles"><h4>
 										아이디<span class="required_mark">*</span>
 									</h4></td>
-								<td colspan="4"><c:if test="${!empty sessionScope.naverId}">
-										<input type="text" class="form-control"
-											placeholder="아이디를 입력하세요." name="id" id="id"
-											value="${sessionScope.naverId}" readonly="readonly">
-									</c:if> <c:if test="${empty sessionScope.naverId}">
+								<td colspan="4">
 										<input type="text" class="form-control"
 											placeholder="8~15자리의 아이디를 입력하세요." name="id" id="id"
 											maxlength="15">
-									</c:if>
 									<div id="idCheckResult" class="checkResult"></div></td>
 							</tr>
 							<tr>
@@ -215,15 +244,10 @@
 								<td class="joinTitles"><h4>
 										이름<span class="required_mark">*</span>
 									</h4></td>
-								<td colspan="4"><c:if
-										test="${!empty sessionScope.naverName}">
-										<input type="text" class="form-control"
-											placeholder="이름을 입력하세요." name="name" id="name"
-											value="${sessionScope.naverName}">
-									</c:if> <c:if test="${empty sessionScope.naverName}">
+								<td colspan="4">
 										<input type="text" class="form-control"
 											placeholder="이름을 입력하세요." name="name" id="name">
-									</c:if></td>
+									</td>
 							</tr>
 							
 							<tr style="height: 30px;"></tr>
@@ -240,7 +264,23 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> --%>
+
+	<form id="frm"
+		action="${pageContext.request.contextPath}/member/memberJoin"
+		method="post">
+		<div class="contents_btn">
+			<input type="text" placeholder="아이디" name="id" id="id" maxlength="15">
+			<input type="password" placeholder="비밀번호" name="pw" id="pw"
+				maxlength="15"> <input type="text" placeholder="이름을 입력하세요."
+				name="name" id="name"> <input type="submit" id="subBtn"
+				value="가입 "> <a href="../home.jsp">취소</a>
+		</div>
+
+
+
+
+	</form>
 
 </body>
 </html>
