@@ -5,6 +5,6 @@
   
  <configuration>
  	<typeAliases>
- 		<typeAlias type="com.fp.member.MemberDTO" alias="MemberDTO"/>
+ 		<typeAlias type="com.kid.member.MemberDTO" alias="MemberDTO"/>
  	</typeAliases>
  </configuration>
