@@ -31,10 +31,7 @@
 		var agree1 = 0;
 		var agree2 = 0;
 		var agree3 = 0;
-		var agree4 = 0;
-		var agree5 = 0;
-		var agree6 = 0;
-		var agree7 = 0;
+	
 
 		if (naverCheck != "") {
 			agree1 = 1;
@@ -75,9 +72,7 @@
 													agree1 = 0;
 												}
 
-												if (agree1 + agree2 + agree3
-														+ agree4 + agree5
-														+ agree6 + agree7 == 7) {
+												if (agree1 + agree2 + agree3 == 3) {
 													$("#subBtn")
 															.css(
 																	"background-color",
