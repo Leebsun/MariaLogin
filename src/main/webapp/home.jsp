@@ -14,13 +14,15 @@
 	<a href="${pageContext.request.contextPath}/member/memberJoin">회원가입</a>
 	<form action="${pageContext.request.contextPath}/member/memberLogin">
 		<input type="text" id="id" name="id"> <input type="password"
-			id="password" name="password">
+			id="pw" name="pw">
 		<button type="submit">로그인</button>
 	</form>
 	 </c:if>
 	 <c:if test="${!empty member}">
 	                     	<li><a id="memberInfo">${member.name}</a></li>
+	                     	<a href="${pageContext.request.contextPath}/kid/face">얼굴인식</a>
 	                     	<a href="${pageContext.request.contextPath}/member/memberLogout" class="logout">로그아웃</a>
+	                     	
 	                     </c:if>
 
 </body>

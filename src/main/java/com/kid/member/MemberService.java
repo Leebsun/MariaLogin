@@ -53,12 +53,13 @@ public class MemberService {
 		String message = "회원가입 실패";
 		
 		//DB upload에 데이터 삽입 & 실제 업로드
-		result=1;
+		
 		
 		if(result > 0)
 		{
 			message = "회원가입 성공";
 		}
+	
 		
 		rd.addFlashAttribute("message", message);
 		
@@ -68,7 +69,7 @@ public class MemberService {
 	public MemberDTO memberLogin(MemberDTO memberDTO) throws Exception {
 		
 		memberDTO = memberDAO.memberLogin(memberDTO);
-		this.stateUpdate(memberDTO);
+		
 		
 		
 		

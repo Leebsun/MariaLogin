@@ -69,18 +69,14 @@ public class MemberController {
 	public String memberJoin(MemberDTO memberDTO, RedirectAttributes rd, HttpSession session) throws Exception {
 		
 		rd = memberService.memberJoin(memberDTO, rd, session);	
+		System.out.println(memberDTO.getName());
 		
 		return "redirect:/";
 	}
 //일반회원 로그인	
 	@RequestMapping(value="memberLogin")
-	public String memberLogin(String logId, String logPw, HttpSession session, RedirectAttributes rd) {
+	public String memberLogin(MemberDTO memberDTO, HttpSession session, RedirectAttributes rd) {
 		String message = "로그인 실패";
-		MemberDTO memberDTO = new MemberDTO();
-
-		
-		memberDTO.setId(logId);
-		memberDTO.setPw(logPw);
 		
 		try {
 			memberDTO = memberService.memberLogin(memberDTO);
@@ -107,16 +103,8 @@ public class MemberController {
 	@RequestMapping(value="memberLogout")
 	public String logout(RedirectAttributes rd, HttpSession session) throws Exception {
 		
-		int result = memberService.stateUpdate((MemberDTO)session.getAttribute("member"));
-		if(result > 0)
-		{
-			rd.addFlashAttribute("message", "로그아웃 되었습니다.");
 			session.invalidate();
-		}
-		else
-		{
-			rd.addFlashAttribute("message", "로그아웃 실패");
-		}
+	
 		
 		return "redirect:/";
 	}
