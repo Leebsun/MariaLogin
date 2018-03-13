@@ -274,7 +274,7 @@
 			<input type="password" placeholder="비밀번호" name="pw" id="pw"
 				maxlength="15"> <input type="text" placeholder="이름을 입력하세요."
 				name="name" id="name"> <input type="submit" id="subBtn"
-				value="가입 "> <a href="../home.jsp">취소</a>
+				value="회원가입"> <a href="../home.jsp">취소</a>
 		</div>
 
 
