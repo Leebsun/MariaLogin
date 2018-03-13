@@ -7,7 +7,7 @@
 <title>얼굴인식</title>
 </head>
 <body>
-<H1>얼굴인식 화면</H1>
+<h1>얼굴인식 화면</h1>
 
 </body>
 </html>
